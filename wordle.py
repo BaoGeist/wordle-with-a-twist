@@ -19,13 +19,15 @@ class txt_five:
     def word_validate(self):
         lst_match = [0, 0, 0, 0, 0]
         master_word = 'penis'
-        txt_succ, txt_fail = '', ''
+        txt_succ, txt_fail = lblSucc2['text'], lblFail2['text']
         for i in range(5):
             if self.word == master_word:
                 top = tk.Toplevel(root)
-                top.geometry("750x250")
+                top.geometry("100x100")
                 top.title("good job")
-                tk.Label(top, text= "you got the word!").place(x=150,y=80)
+                tk.Label(top, text= "you got the word!").pack()
+                lst_match = [1, 1, 1, 1, 1]
+                entTemp.config(state='disabled')
                 break
             elif self.word[i] == master_word[i]:
                 lst_match[i] = 1
@@ -80,7 +82,7 @@ def check_word():
 
     #length check
     if not len(word) == 5:
-        lblUser['text'] = 'Make sure you only enter 4 letters'
+        lblUser['text'] = 'Make sure you only enter 5 letters'
         return (None)
 
     #lpha check
