@@ -1,4 +1,4 @@
-# wordle-with-a-twist
+# spoof wordle for McMaster 2022 Engineering Handbook
 a small wordle spoof program created for the McMaster 2022 Engineering Handbook 
 
 # run instructions
