@@ -113,6 +113,12 @@ def input_word(e):
         lst_words[int_words] = stor
         for i in range(6):
             draw_five(lst_words[i],i)
+            if i == 5 and lst_words[i] != '_____':
+                top = tk.Toplevel(root)
+                top.geometry("100x100")
+                top.title("good job")
+                tk.Label(top, text= "you fucking suck!").pack()
+                entTemp.config(state='disabled')
         int_words += 1
     
 lst_five = acquire_words()
@@ -147,6 +153,7 @@ global lst_words
 global int_words
 lst_words = ['_____','_____','_____','_____','_____','_____']
 int_words = 0
+print(lst_words)
 for i in range(6):
     draw_five(lst_words[i],i)
 
